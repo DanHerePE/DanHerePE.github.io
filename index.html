@@ -52,7 +52,15 @@ Jovan (<a href="https://github.com/JovanModPE" class="user-mention">@JovanModPE<
 
 <h3><a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comment</h3>
 
-<p>Want to tell me something?<p>
+<form method='post'>
+  NAME: <input type='text' name='name' id='name' /><br />
+  Email: <input type='text' name='email' id='email' /><br />
+  Website: <input type='text' name='website' id='website' /><br />
+  Comment:<br />
+  <textarea name='comment' id='comment'></textarea><br />
+  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+  <input type='submit' value='Submit' />  
+</form>
 
     </section>
   </body>
