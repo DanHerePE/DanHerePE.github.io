@@ -78,7 +78,7 @@ function checkCookie() {
     if (user != "") {
         alert("You are already logged in as " + user);
     } else {
-       user = prompt("Please enter your username(permanent for 30 days)","");
+       user = prompt("Please enter your username","");
        if (user != "" && user != null) {
            setCookie("username", user, 30);
        }
@@ -86,8 +86,8 @@ function checkCookie() {
 }
 
 function deleteCookie() {
+    alert("You have successfully loggedout as " + username);
     document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-    alert("You have successfully loggedout");
 }
 </script>
 
