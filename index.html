@@ -46,9 +46,7 @@ src="http://www.youtube.com/embed/sCNrK-n68CM?autoplay=1">
 
 <p>Not signed in yet? Login!</p>
 
-<button onclick="checkCookie()">Signin</button>
-
-<button onclick="deleteCookie()">Signout</button>
+<button onclick="checkCookie()">Signin/out</button>
 
 <p id="demo"></p>
 
@@ -67,7 +65,7 @@ function getCookie(cname) {
         var c = ca[i];
         while (c.charAt(0)==' ') c = c.substring(1);
         if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
+        return c.substring(name.length, c.length);
         }
     }
     return "";
@@ -76,19 +74,14 @@ function getCookie(cname) {
 function checkCookie() {
     var user=getCookie("username");
     if (user != "") {
-        alert("You are already logged in as " + user);
-document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+       alert("Successfully logged out as " + user);
+       document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     } else {
        user = prompt("Please enter your username","");
        if (user != "" && user != null) {
-           setCookie("username", user, 30);
+       setCookie("username", user, 30);
        }
     }
-}
-
-function deleteCookie() {
-    alert("Successfully loggedout as " + user);
-    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
 }
 </script>
 
