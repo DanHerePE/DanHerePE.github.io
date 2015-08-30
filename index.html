@@ -46,7 +46,9 @@ src="http://www.youtube.com/embed/sCNrK-n68CM?autoplay=1">
 
 <p>Not signed in yet? Login!</p>
 
-<button onclick="checkCookie()">Login/Signup</button>
+<button onclick="checkCookie()">Signin</button>
+
+<button onclick="deleteCookie()">Signout</button>
 
 <p id="demo"></p>
 
@@ -81,6 +83,10 @@ function checkCookie() {
            setCookie("username", user, 30);
        }
     }
+}
+
+function deleteCookie() {
+    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
 }
 </script>
 
