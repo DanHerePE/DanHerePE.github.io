@@ -72,15 +72,20 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
+    var notice;
     var user=getCookie("username");
     if (user != "") {
-       alert("Successfully logged out as " + user);
-       document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        alert("Successfully logged out as " + user);
+        x = "Goodbye, " + user + "!";
+        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        document.getElementById("demo").innerHTML = x;
     } else {
-       user = prompt("Please enter your username","");
-       if (user != "" && user != null) {
-       setCookie("username", user, 30);
-       }
+        user = prompt("Please enter your username","");
+        if (user != "" && user != null) {
+        setCookie("username", user, 30);
+        x = "Hello, " + user + "!";
+        document.getElementById("demo").innerHTML = x;
+        }
     }
 }
 </script>
