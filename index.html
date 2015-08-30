@@ -48,7 +48,7 @@ src="http://www.youtube.com/embed/sCNrK-n68CM?autoplay=1">
 
 <p>Not signed in yet?</p>
 
-<button onclick="checkCookie()">Signin/out</button>
+<button onclick="signInOut()">Signin/out</button>
 
 <p id="demo"></p>
 
@@ -73,7 +73,7 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie() {
+function signInOut() {
     var notice;
     var user=getCookie("username");
     if (user != "") {
