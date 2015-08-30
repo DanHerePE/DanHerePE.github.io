@@ -44,12 +44,22 @@ src="http://www.youtube.com/embed/sCNrK-n68CM?autoplay=1">
 
 <input type="button" value="No" onClick="window.location='http://data.whicdn.com/images/81086846/superthumb.jpg'"/>
 
+<button onclick="login()">Login</button>
+
+<p id="demo"></p>
+
+<script>
+function login() {
+    var x;
+    if (confirm("Login with device id?") == true) {
+        x = "login failed(not registered)";
+    } else {
+        x = "canceled";
+    }
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
     </section>
-
-<input type="button" value="login" onClick="alert('Login :'<form action="demo_form.asp">
-  U: <input type="text" name="fname"><br>
-  P: <input type="text" name="lname"><br>
-  <input type="submit" value="Submit"></form>)"/>
-
   </body>
 </html>
