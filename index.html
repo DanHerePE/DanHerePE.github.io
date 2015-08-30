@@ -44,9 +44,9 @@ src="http://www.youtube.com/embed/sCNrK-n68CM?autoplay=1">
 
 <input type="button" value="No" onClick="window.location='http://data.whicdn.com/images/81086846/superthumb.jpg'"/>
 
-<p>Are you an admin? Login!</p>
+<p>Not signed in yet? Login!</p>
 
-<button onclick="checkCookie()">Login</button>
+<button onclick="checkCookie()">Login/Signup</button>
 
 <p id="demo"></p>
 
@@ -74,9 +74,9 @@ function getCookie(cname) {
 function checkCookie() {
     var user=getCookie("username");
     if (user != "") {
-        alert("Welcome again " + user);
+        alert("You are already logged in as " + user);
     } else {
-       user = prompt("Please enter your name:","");
+       user = prompt("Please enter your username(permanent for 30 days)","");
        if (user != "" && user != null) {
            setCookie("username", user, 30);
        }
