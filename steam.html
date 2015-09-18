@@ -27,9 +27,9 @@
 
       <h2>Use The Bypass Tool</h2>
 
-        <p>If you don't see the game you wanted, scroll down to Suggestion.</p>
+        <p>First, you need to know the steam game's game ID</p>
 
-          <input type="button" value="Get : A.V.A - Alliance of Valiant Arms" onClick="location.href='steam://run/102700'"/>
+          <input type="button" value="Launch Tool" onClick="launchTool()"/>
 
       <h2>Help?</h2>
 
@@ -42,6 +42,15 @@
       <h2>If You Are Going For Achievement Items</h2>
 
         <p>If you are downloading sertain games just for their Achievement Items, I HIGHLY suggest you to visit <a href="http://gib.me/sam/">Steam Achievement Manager</a> to hack steam achievement and get the item before download finishes. PLEASE READ ALL DIRECTIONS GIVEN FROM THE WEBSITE, OR YOUR ACCOUNT CAN BE VAC BANNED, AND I AM NOT RESPONSIBLE FOR YOUR BAN.</p>
+
+<script>
+function launchTool() {
+   gameid = prompt("Please enter the game ID","102700");
+     if (gameid != "" && gameid != null) {
+       window.location.href='steam://run/' + gameid
+     }
+}
+</script>
 
     </section>
   </body>
