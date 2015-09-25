@@ -41,8 +41,8 @@
 
 <p>If you download this mod, your automatically accepting my Terms and Conditions</p>
 
-<button onclick="location.href='http://www.mediafire.com/download/51jgdwos42ujsws/Dan%27sFurnitureMod.apk';click()">Mediafire</button>
-<button onclick="location.href='https://www.dropbox.com/s/q1bxdqrhq3c23dd/DansFurnitureMod.apk?dl=0';click()">Dropbox</button>
+<button onclick="mediaFire()">Mediafire</button>
+<button onclick="dropBox()">Dropbox</button>
 
 <p>Download the mod from any desired website, enjoy!</p>
 
@@ -52,9 +52,17 @@
 
  <script type="text/javascript">
   int clicks = 0;
-  function click() {
+
+  function mediaFire() {
       clicks += 1;
       document.getElementById("clicks").innerHTML = clicks;
+      location.href='http://www.mediafire.com/download/51jgdwos42ujsws/Dan%27sFurnitureMod.apk'
+  };
+
+  function dropBox() {
+      clicks += 1;
+      document.getElementById("clicks").innerHTML = clicks;
+      location.href='https://www.dropbox.com/s/q1bxdqrhq3c23dd/DansFurnitureMod.apk?dl=0'
   };
  </script>
 
