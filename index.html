@@ -80,7 +80,7 @@ function signInOut() {
     var notice;
     var user=getCookie("username");
     if (user != "") {
-        var logout = confirm("Logging out as " + user + ", continue?");
+        var logout = confirm("Log out as " + user + ", continue?");
         if (logout == true) {
         notice = "Goodbye, " + user + "!";
         document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
@@ -90,7 +90,7 @@ function signInOut() {
         user = prompt("Please enter your username","");
         if (user != "" && user != null) {
         setCookie("username", user, 30);
-        notice = "Hello, " + user + "!";
+        notice = "Hello, " + user + "! You can use the register button again to go incognito";
         document.getElementById("demo").innerHTML = notice;
         }
     }
