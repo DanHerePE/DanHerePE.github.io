@@ -1,35 +1,30 @@
-<?php
-$to = "somebody@example.com, somebodyelse@example.com";
-$subject = "HTML email";
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Email</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/635186478755086336/UsLCTYA1_400x400.jpg">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Email Sender</h1>
+      <h2 class="project-tagline">send emails</h2>
+    </section>
 
-$message = "
-<html>
-<head>
-<title>HTML email</title>
-</head>
-<body>
-<p>This email contains HTML Tags!</p>
-<table>
-<tr>
-<th>Firstname</th>
-<th>Lastname</th>
-</tr>
-<tr>
-<td>John</td>
-<td>Doe</td>
-</tr>
-</table>
-</body>
+    <section class="main-content">
+
+<form name="mail" action="send_mail.php" method="post">
+<input type="text" name="name" />
+<input type="text" name="email" />
+<input type="text" name="comment" />
+<input type="submit" value="Submit">
+</form>
+
+    </section>
+  </body>
 </html>
-";
-
-// Always set content-type when sending HTML email
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-// More headers
-$headers .= 'From: <webmaster@example.com>' . "\r\n";
-$headers .= 'Cc: myboss@example.com' . "\r\n";
-
-mail($to,$subject,$message,$headers);
-?>
