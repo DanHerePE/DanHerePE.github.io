@@ -1,24 +1,69 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Increment count when button is clicked</title>
-  </head>
-
-  <body>
-    <input type="button" value="Count" id="countButton" />
-
-    <p>The button was pressed <span id="displayCount">0</span> times.</p>
-
-    <script type="text/javascript">
-      var count = 0;
-      var button = document.getElementById("countButton");
-      var display = document.getElementById("displayCount");
-
-      button.onclick = function(){
-        count++;
-        display.innerHTML = count;
-      }
-    </script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Plus/Minus</title>
+   <style>
+      body {padding-top:20px;text-align:center;}
+      button {padding:1px 5px;}
+      #num {padding:5px 10px;background-color:#CCC;color:#F00;border:1px solid #000;}
+   </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+   <script>
+      // Set cookie function with the name, value, and experation date (in days)
+      function setCookie(name,value,expDays) {
+         var expDate=new Date();
+         expDate.setDate(expDate.getDate()+expDays);
+         var cValue=escape(value)+((expDays==null) ? '' : '; expires='+expDate.toUTCString());
+         document.cookie=name+"="+cValue;
+         };
+      // Get cookie function
+      function getCookie(name) {
+         var i,cName,cValue,cookies=document.cookie.split(';');
+            for(i=0;i<cookies.length;i++) {
+               cName=cookies[i].substr(0,cookies[i].indexOf('='));
+               cValue=cookies[i].substr(cookies[i].indexOf('=')+1);
+               cName=cName.replace(/^\s+|\s+$/g,'');
+                  if(cName==name) {return unescape(cValue);};
+               };
+         };
+      // Check cookie function
+      function checkCookie(name) {
+         var cValue=getCookie(name);
+            if(cValue!=null && cValue!="") {return true};
+            else {return false;};
+         };
+      $(function() {
+         // Set the name of the cookie you would like to use, the number of days it will stay active, the inputs/output, and the current number variables
+         // **HINT**
+         // If you wish to 'delete' a cookie, just set the experation date to a negitive number
+         // ex: expDay=-1;
+         var cName="number",expDay=1,plus=$('button[name=plus]'),minus=$('button[name=minus]'),output=$('span#num'),c;
+            // If the cookie is there, return the proper number
+            if(checkCookie(cName)) {output.text(getCookie(cName));};
+            // Else start the count
+            else {output.text('0');};
+         // Plus click function
+         plus.click(function() {
+            // Convert the output value into a number and add one
+            c=(parseFloat(output.text())+1);
+            // Add the new value to the output
+            output.text(c);
+            // Reset the cookie with the new value
+            setCookie(cName,c,expDay);
+            });
+         // Minus click function
+         minus.click(function() {
+            // Convert the output value into a number and add one
+            c=(parseFloat(output.text())-1);
+            // Add the new value to the output
+            output.text(c);
+            // Reset the cookie with the new value
+            setCookie(cName,c,expDay);
+            });
+         });
+   </script>
+</head>
+<body>
+   <button name="plus">+</button> <span id="num"></span> <button name="minus">-</button>
+</body>
 </html>
