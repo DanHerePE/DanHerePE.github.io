@@ -1,6 +1,6 @@
 <?php
-$to = "somebody@example.com, somebodyelse@example.com";
-$subject = "HTML email";
+$to = "danielshim0911@gmail.com, danielshim0911@gmail.com";
+$subject = "danherepe.github.io email";
 
 $message = "
 <html>
