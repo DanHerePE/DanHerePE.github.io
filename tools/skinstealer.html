@@ -24,7 +24,7 @@
         <p><input type="button" value="Launch Tool" onClick="launchTool()"/></p>
         <p id="demo"></p>
 
-<img id="myimg" src="https://crafatar.com/renders/body/" + document.getElementById("demo").innerHTML + "?helm&amp;scale=4">
+<img id="myimg" src="https://crafatar.com/renders/body/" + "DanHerePE" + "?helm&amp;scale=4">
 
 1
 
@@ -33,7 +33,7 @@
           gameid = prompt("Please enter Name of Player","Notch");
           if (gameid != "" && gameid != null) {
             window.location.href='http://minecraft.tools/download-skin/' + gameid
-            document.getElementById("demo").innerHTML = gameid
+            document.getElementById("demo").innerHTML = "Downloaded Skin of" + gameid + "to Downloads"
           }
         }
       </script>
