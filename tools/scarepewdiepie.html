@@ -13,15 +13,17 @@
 $(document).ready(function(){
 $("iframe").hide();
 $("p").hide();
-$("#hide").click(function(){
-$("iframe").hide();
-$("p").hide();
 });
-$("#show").click(function(){
+function askId() {
+var ask = prompt("Enter access ID","");
+if (ask == "DanHerePE") {
 $("iframe").show();
 $("p").show();
-});
-});
+document.getElementById("tell").innerHTML = "Access granted, was that too easy to crack?";
+} else if (ask =! "DanHerePE") {
+document.getElementById("tell").innerHTML = "Invalid ID.";
+}
+}
 </script>
 <body background="https://i.ytimg.com/vi/r6oX7zAjMsE/maxresdefault.jpg">
 <h1><font color="white">Scare PewDiePie</font></h1>
@@ -31,7 +33,7 @@ $("p").show();
 <p>Episode 2</p>
 <iframe width="640" height="360" src="//www.zippcast.com/videoview.php?vplay=1617870b442a629a8da&auto=no" frameborder="0" allowfullscreen></iframe>
 <p>(obviously episode 7 came out and im too lazy to add it here)</p>
-<button id="show">Show</button>
-<button id="hide">Hide</button>
+<h4 id="tell"></h4>
+<button onclick="askId()">Access</button>
 </body>
 </html>
