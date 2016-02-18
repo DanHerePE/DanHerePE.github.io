@@ -19,6 +19,7 @@ var ask = prompt("Enter access ID","");
 if (ask == "DanHerePE") {
 $("iframe").show();
 $("p").show();
+$("button").hide();
 document.getElementById("tell").innerHTML = "Access granted, was that too easy to crack?";
 } else if (ask =! "DanHerePE") {
 document.getElementById("tell").innerHTML = "Invalid ID.";
