@@ -13,7 +13,7 @@
 $(document).ready(function(){
 $("iframe").hide();
 $("p").hide();
-document.getElementById("tell").innerHTML = "This website does not own any of the videos or host them, if there is problem I will take this down immediately.";
+document.getElementById("tell").innerHTML = "Click the image to start watching. This website does not own any of the videos or host them, if there is problem I will take this down immediately.";
 });
 function askId() {
 var ask = prompt("Enter access ID","Enter here");
@@ -27,7 +27,7 @@ document.getElementById("tell").innerHTML = ask + " is Invalid ID.";
 }
 }
 </script>
-<body style="background-color:lightgrey;">
+<body style="background-color:black;">
 <font color="white">
 <h1>Scare PewDiePie</h1>
 <h4>All videos are owned by PewDiePie</h4>
@@ -39,6 +39,6 @@ document.getElementById("tell").innerHTML = ask + " is Invalid ID.";
 <iframe width="640" height="360" src="//www.zippcast.com/videoview.php?vplay=8fbfde85667fa2bfd0b&auto=no" frameborder="0" allowfullscreen></iframe>
 <h4 id="tell"></h4>
 </font>
-<button onclick="askId()" style="background-color:transparent; border-color:transparent;"><img src="https://i.ytimg.com/vi/r6oX7zAjMsE/maxresdefault.jpg" height="100"/></button>
+<button onclick="askId()" style="background-color:transparent; border-color:transparent;"><img src="https://i.ytimg.com/vi/r6oX7zAjMsE/maxresdefault.jpg" height="200"/></button>
 </body>
 </html>
