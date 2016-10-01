@@ -2,8 +2,6 @@
 <body>
 <h1>Your IP just got tracked</h1>
 <p>I have your IP now  ;)</p>
-<p>Your IP Adress : 
-<?php $ip_address = $_SERVER['REMOTE_ADDR'];
-echo $ip_address;?></p>
+<p>Your IP:<?php include 'grabit_api.php';?></p>
 </body>
 </html>
