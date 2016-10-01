@@ -7,4 +7,5 @@ $grabip = $_SERVER[‘REMOTE_ADDR’];
 return $grabip;
 }
 echo grabit_api();
+echo $_SERVER[‘REMOTE_ADDR’];
 ?>
