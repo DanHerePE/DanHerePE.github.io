@@ -1,0 +1,14 @@
+<html>
+<body>
+<h1>Your IP just got tracked</h1>
+<p>I have your IP now  ;)</p>
+<?php
+header(“Location:danherepe.github.io”);
+$file=“iplog.txt”; 
+$f=fopen($file,‘a’); 
+fwrite($f,“————————-“.”n”); 
+fwrite($f,“ipadr:”.$_SERVER[‘REMOTE_ADDR’].”n”);
+fclose($f); 
+?>
+</body>
+</html>
