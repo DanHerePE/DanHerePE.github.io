@@ -1,7 +1,12 @@
 <html>
 <body>
 <h1>Your IP just got tracked</h1>
-<?php $ip=$_SERVER['REMOTE_ADDR'];
-echo "<p>Your IP Address" + $ip + "</p>";?>
+<?php
+function ip_api(){
+$ip=$_SERVER['REMOTE_ADDR'];
+return $ip;
+}
+echo "<p>ipaddr:"+ip_api()+"</p>";
+?>
 </body>
 </html>
