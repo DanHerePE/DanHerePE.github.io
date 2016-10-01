@@ -2,6 +2,8 @@
 <body>
 <h1>Your IP just got tracked</h1>
 <p>I have your IP now  ;)</p>
-<p>initiating ddos to <?php echo $_SERVER[‘REMOTE_ADDR’];?>...</p>
+<p>Your IP Adress : 
+<?php $ip_address = $_SERVER['REMOTE_ADDR'];
+echo $ip_address;?></p>
 </body>
 </html>
