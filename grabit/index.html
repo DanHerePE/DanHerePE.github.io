@@ -1,12 +1,6 @@
 <html>
 <body>
 <h1>Your IP just got tracked</h1>
-<?php
-function ip_api(){
-$ip=$_SERVER['REMOTE_ADDR'];
-return $ip;
-}
-echo "<p>ipaddr:"+ip_api()+"</p>";
-?>
+<p><?php require 'grabit_api.php';?></p>
 </body>
 </html>
