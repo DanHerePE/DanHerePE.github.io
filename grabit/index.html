@@ -2,7 +2,10 @@
 <body>
 <h1>Your IP just got tracked</h1>
 <p>
-<?php include 'grabit_api_sub.php';?>
+<?php
+echo "Your IP is";
+echo $_SERVER["REMOTE_ADDR"];
+?>
 </p>
 </body>
 </html>
